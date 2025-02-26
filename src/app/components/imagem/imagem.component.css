@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    height: 80vh;
+  }
+  
+  img{
+    width: 230px;
+    height: 230px;
+  }
+
+  p{
+    font-size: 20px;
+    color: #dd7b22;
+    margin: 30px;
+    font-style: italic;
+    text-align: center;
+}
