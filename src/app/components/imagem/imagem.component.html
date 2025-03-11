@@ -1,7 +1,10 @@
 <!-- Feito por Matheus Coletti e Pedro Balieiro -->
 <div class="container">
-    <img [src]="fechado"/> 
-    <p>ou</p>
-    <img [src]="aberto"/>
-  </div>
-  
+  <button (click)="toggleBiscoito()">
+    <!-- Exibe a imagem do biscoito fechado ou aberto -->
+    <img [src]="biscoitoAberto ? aberto : fechado"/>
+  </button>
+
+  <!-- Exibe a frase apenas quando o biscoito estiver aberto -->
+  <p *ngIf="biscoitoAberto">{{ frase }}</p>
+</div>
