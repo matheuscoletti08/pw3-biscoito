@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./imagem.component.css']
 })
 export class ImagemComponent {
-  fechado = 'fechado.webp'; // Caminho da imagem do biscoito fechado
-  aberto = 'aberto.webp';   // Caminho da imagem do biscoito aberto
-  biscoitoAberto = false;   // Variável que controla se o biscoito está aberto ou fechado
-  frase: string = '';       // Variável que armazena a frase a ser exibida
+  fechado = 'fechado.webp'; 
+  aberto = 'aberto.webp';
+  biscoitoAberto = false;
+  frase: string = '';
 
   frases: string[] = [
     'Por que o JavaScript foi ao terapeuta? Porque tinha muitos callbacks não resolvidos',
@@ -24,14 +24,13 @@ export class ImagemComponent {
     'Por que os números quebraram? Porque não aguentaram a pressão decimal'
   ];
 
-  // Função que alterna entre biscoito aberto e fechado e gera a frase quando o biscoito é aberto
+
   toggleBiscoito() {
-    this.biscoitoAberto = !this.biscoitoAberto; // Alterna o estado do biscoito
+    this.biscoitoAberto = !this.biscoitoAberto;
     if (this.biscoitoAberto) {
-      // Quando o biscoito é aberto, escolhe uma frase aleatória
+
       this.frase = this.frases[Math.floor(Math.random() * this.frases.length)];
     } else {
-      // Quando o biscoito é fechado, limpa a frase
       this.frase = '';
     }
   }
