@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FraseComponent } from "./components/frase/frase.component";
-import { ImagemComponent } from "./components/imagem/imagem.component";
+import { BiscoitoComponent } from './components/biscoito/biscoito.component';
+import { ImagemComponent } from './components/imagem/imagem.component';
+import { FraseComponent } from './components/frase/frase.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FraseComponent, ImagemComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [BiscoitoComponent, ImagemComponent, FraseComponent],
 })
 export class AppComponent {
-  title = 'biscoit';
+  biscoitoAberto: boolean = false;
+  frase: string = '';
+
+
+  onFraseGerada(novaFrase: string) {
+    this.frase = novaFrase;
+  }
+
+  
+  onBiscoitoAberto(status: boolean) {
+    this.biscoitoAberto = status;
+  }
 }

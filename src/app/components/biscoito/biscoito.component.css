@@ -1,25 +1,12 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 80vh;
-  }
-
-  img{
-    width: 200px;
-    height: 200px;
-  }
-
-  p{
-    font-size: 20px;
-    color: #dd7b22;
-    margin: 30px;
-    font-style: italic;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
   padding: 10px 20px;
@@ -33,7 +20,7 @@ button {
   background-color: white;
   color: orange;
   border: 2px solid orange;
-  margin-top: 10px;
+  margin-top: -250px;
 }
 
 .quebrar:disabled {
@@ -45,5 +32,4 @@ button {
   background-color: white;
   color: black;
   border: 2px solid black;
-  margin-top: 10px;
 }

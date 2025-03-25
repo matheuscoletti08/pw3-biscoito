@@ -1,3 +1,5 @@
-<app-imagem></app-imagem>
-<app-frase/>
-<footer> Feito por Matheus Coletti e Pedro Balieiro </footer>
+<app-imagem [biscoitoAberto]="biscoitoAberto"></app-imagem>
+<app-frase [frase]="frase"></app-frase>
+<app-biscoito (frase)="onFraseGerada($event)" (biscoitoAberto)="onBiscoitoAberto($event)"></app-biscoito>
+
+<footer>Feito por Matheus Coletti e Pedro Balieiro</footer>
